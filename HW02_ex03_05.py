@@ -94,8 +94,8 @@ def main():
     """
     print("Hello World!")
 
-
-    
+	two_by_two()
+	four_by_four() 
 
 
 

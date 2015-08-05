@@ -33,7 +33,7 @@ def is_triangle(a,b,c):
     else:
         print("No")
 
-def is_triangle_ints():
+def check_stick_lengths():
 
     a = input('Enter the First side: ')
     b = input('Enter the Second side: ')
@@ -61,6 +61,11 @@ def main():
     """
     print("Hello World!")
 
+    is_triangle(1,2,3)
+    is_triangle(1,2,4)
+    is_triangle(1,5,3)
+    is_triangle(6,2,3)
+    check_stick_lengths()
 
 
 if __name__ == "__main__":
