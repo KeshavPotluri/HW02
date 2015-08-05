@@ -41,48 +41,44 @@ def printChar(s):
 def printLastChar(y):
 	print(y)
 
-def printLine(firstChar, secChar):
-	printChar(firstChar)
-	printChar(secChar)
-	printChar(secChar)
-	printChar(secChar)
-	printChar(secChar)
+def printCharacter(i, firstChar, secChar):
+	if i >0:
+		if(i==1 or i%5 == 1):
+			if(i==1):
+				printLastChar(firstChar)
+			else:
+				printChar(firstChar)
+				printCharacter(i-1, firstChar, secChar)
+		else:
+			printChar(secChar)
+			printCharacter(i-1, firstChar, secChar)
 
-def printHorizontalTwice(firstChar, secChar):
-	printLine(firstChar,secondChar)
-	printLine(firstChar,secondChar)
-
-def printHorizontalFourTimes(firstChar, secChar):
-	printHorizontalTwice(firstChar, secChar)
-	printHorizontalTwice(firstChar, secChar)
-
-def printHorizontal(isTwice, firstChar, secChar):
-	if isTwice:
-		printHorizontalTwice(firstChar, secChar)
-	else:
-		printHorizontalFourTimes(firstChar, secChar)
-	printLastChar(firstChar)
-
-def printVertical(isTwice):
-	printHorizontal(isTwice, "|", " ")
-	printHorizontal(isTwice, "|", " ")
-	printHorizontal(isTwice, "|", " ")
-	printHorizontal(isTwice, "|", " ")
-	printHorizontal(isTwice, "+", "-")
+	
+def printLine(numberOfBoxes, firstChar, secChar):
+	i = numberOfBoxes*5 + 1
+	printCharacter(i, firstChar, secChar)
 
 
-def printVerticalTwice(isTwice):
-	printVertical(isTwice)
-	printVertical(isTwice)
+
+def printVerticalLine(j,numberOfBoxes):
+  	if j>0:
+		if(j==1 or j%5 == 1) :
+			printLine(numberOfBoxes, "+", "-")
+			printVerticalLine(j-1, numberOfBoxes)
+		else:
+			printLine(numberOfBoxes, "|", " ")
+			printVerticalLine(j-1, numberOfBoxes)
+
+def printVerticalLines(numberOfBoxes):
+	j = numberOfBoxes*5 + 1
+	printVerticalLine(j,numberOfBoxes)
 
 def two_by_two():
-	printHorizontal(True,"+", "-")
-	printVerticalTwice(True)
+	printVerticalLines(2)
 
-def four_by_four():
-	printHorizontal(False,"+", "-")
-	printVerticalTwice(False)
-	printVerticalTwice(False)
+def two_by_two():
+	printVerticalLines(4)
+
 
 # Write your functions above:
 ################################################################################
