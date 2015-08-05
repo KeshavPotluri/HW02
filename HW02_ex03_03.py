@@ -14,11 +14,11 @@
 ################################################################################
 # Write your function below:
 # Body
-
-
-
-
-
+def right_justify(s):
+	stringLength = len(s)
+	spaceToAppend = 70 - stringLength
+	print(spaceToAppend*' ' + s)
+	
 
 
 # Write your function above:

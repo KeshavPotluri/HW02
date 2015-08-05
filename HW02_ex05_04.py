@@ -23,7 +23,22 @@
 # Write your functions below:
 # Body
 
+def is_triangle(a,b,c):
+    sumAB = a + b
+    sumBC = b + c
+    sumCA = c + a
 
+    if ((sumAB)>c and (sumBC)>a and (sumCA)>b):
+        print("Yes")
+    else:
+        print("No")
+
+def is_triangle_ints():
+
+    a = input('Enter the First side: ')
+    b = input('Enter the Second side: ')
+    c = input('Enter the Third side: ')
+    is_triangle(int(a),int(b),int(c))
 
 
 

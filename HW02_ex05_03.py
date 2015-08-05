@@ -21,8 +21,23 @@
 # Write your functions below:
 # Body
 
+def check_fermat(a,b,c,n):
 
+	sumOfSquares = a**n + b**n
+	squareOfThird = c**n
 
+	if(sumOfSquares == squareOfThird) and n>2:
+		print("Holy smokes, Fermat was wrong!")
+	else:
+		print("No, that doesn't work.")
+
+def check_fermat_ints():
+
+	a = input('Enter the First number: ')
+	b = input('Enter the Second number: ')
+	c = input('Enter the Third number: ')
+	n = input('Enter the power: ')
+	check_fermat(int(a),int(b),int(c),int(n))
 
 
 
@@ -41,6 +56,8 @@ def main():
     """
     print("Hello World!")
 
+    check_fermat_ints()
+    check_fermat(1,2,3,4)
 
 
 if __name__ == "__main__":

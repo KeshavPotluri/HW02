@@ -35,16 +35,54 @@
 # Write your functions below:
 # Body
 
+def printChar(s):
+	print(s),
+
+def printLastChar(y):
+	print(y)
+
+def printLine(firstChar, secChar):
+	printChar(firstChar)
+	printChar(secChar)
+	printChar(secChar)
+	printChar(secChar)
+	printChar(secChar)
+
+def printHorizontalTwice(firstChar, secChar):
+	printLine(firstChar,secondChar)
+	printLine(firstChar,secondChar)
+
+def printHorizontalFourTimes(firstChar, secChar):
+	printHorizontalTwice(firstChar, secChar)
+	printHorizontalTwice(firstChar, secChar)
+
+def printHorizontal(isTwice, firstChar, secChar):
+	if isTwice:
+		printHorizontalTwice(firstChar, secChar)
+	else:
+		printHorizontalFourTimes(firstChar, secChar)
+	printLastChar(firstChar)
+
+def printVertical(isTwice):
+	printHorizontal(isTwice, "|", " ")
+	printHorizontal(isTwice, "|", " ")
+	printHorizontal(isTwice, "|", " ")
+	printHorizontal(isTwice, "|", " ")
+	printHorizontal(isTwice, "+", "-")
 
 
+def printVerticalTwice(isTwice):
+	printVertical(isTwice)
+	printVertical(isTwice)
 
+def two_by_two():
+	printHorizontal(True,"+", "-")
+	printVerticalTwice(True)
 
-
-
-
-
-
-
+def four_by_four():
+	printHorizontal(False,"+", "-")
+	printVerticalTwice(False)
+	printVerticalTwice(False)
 
 # Write your functions above:
 ################################################################################
@@ -55,6 +93,8 @@ def main():
     four_by_four()
     """
     print("Hello World!")
+
+
     
 
 
